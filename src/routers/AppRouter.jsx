@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 // import { Footer, Header } from '../components';
+import TodoApp from '../00-todoApp/TodoApp';
 import { Home } from '../pages';
 import { CounterApp, CounterWithCustomHook } from '../01-useState';
 import { FormWithCustomHook, SimpleForm } from '../02-useEffect';
@@ -16,7 +17,9 @@ const AppRouter = () => {
 
             <Routes>
 
-                <Route path='/' element={<Home />} />
+                <Route path='/' element={<TodoApp />} />
+
+                <Route path='/hooks' element={<Home />} />
 
                 <Route path='/counter' element={<CounterApp />} />
 
