@@ -2,7 +2,7 @@
 
 * **Section**: 9, 10, 11 y 12
 
-## 🖱️ Visit here: 
+## 🖱️ Visit here: https://list-todoapp.netlify.app/
 
 ## 📁 Project:
 
@@ -19,6 +19,14 @@ Project (section 9):
 * Memo
 * useMemo
 * useCallback
+
+Project (section 10 - ToDoApp):
+
+* useReducer
+* Reducers
+* Teoría de un reducer
+* TODOs app
+* CRUD local
 
 ## 📌 Dependencies
 
@@ -55,7 +63,7 @@ Project (section 9):
 
 ## 😍 TodoList App
 
-
+![todoapp](https://user-images.githubusercontent.com/88461234/180621236-21917076-c7eb-46af-9a74-8233326e932f.png)
 
 ## 😎 Author
 
