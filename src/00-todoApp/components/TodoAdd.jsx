@@ -3,7 +3,7 @@ import { useForm } from '../../hooks/useForm';
 const current = new Date();
 const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
 
-const TodoAdd = ({ onNewTodo }) => {
+export const TodoAdd = ({ onNewTodo }) => {
 
     const { formState, onInputChange, onResetForm, description } = useForm({
         description: "",
@@ -26,11 +26,13 @@ const TodoAdd = ({ onNewTodo }) => {
     }
 
     return (
-        <form onSubmit={onFormSubmit}>
+        <form onSubmit={onFormSubmit} className='todo-form'>
+            <label htmlFor="add_todo" className='label-search' >Search GIFs</label>
             <input
+                id='add_todo'
                 type='text'
-                placeholder="Add TODO"
-                className='form-control'
+                placeholder="Add New ToDo"
+                className='todo-input'
                 value={description}
                 name='description'
                 onChange={onInputChange}
@@ -38,12 +40,10 @@ const TodoAdd = ({ onNewTodo }) => {
 
             <button
                 type='submit'
-                className='btn btn-outline-primary mt-1'
+                className='todo-button'
             >
-                Agregar
+                Add
             </button>
         </form>
     )
 };
-
-export default TodoAdd;

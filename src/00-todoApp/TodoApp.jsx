@@ -1,36 +1,36 @@
-import TodoAdd from './components/TodoAdd';
-import TodoList from './components/TodoList';
+import {TodoAdd, TodoList} from './components';
 import { useTodo } from './hooks/useTodo';
+import './todos.css';
 
 const TodoApp = () => {
 
-    const { todos, handleNewTodo, handleDeleteTodo, handleToggleTodo, todosCount, pendingTodosCount} = useTodo();
+    const { todos, handleNewTodo, handleDeleteTodo, handleToggleTodo, todosCount, pendingTodosCount, isLoading} = useTodo();
 
     return (
-        <>
-            <h1>TodoApp {todosCount}. <small>Pendientes: {pendingTodosCount}</small></h1>
-            <br />
+        <div className='todo-app'>
 
-            <div>
-                <div className='col-5'>
-                    <h4>Agregar TODO</h4>
-                    <hr />
+            {
+                isLoading && (<Loader />)
+            }
 
-                    <TodoAdd
-                        onNewTodo={handleNewTodo}
-                    />
-                </div>
+            <header className=''>
+                <h1>My ToDo App</h1>
+            </header>
+            
 
-                <div className='col-7'>
-                    <TodoList
-                        todos={todos}
-                        onDeleteTodo={handleDeleteTodo}
-                        onToggleTodo={handleToggleTodo}
-                    />
-                </div>
-            </div>
+            <TodoAdd
+                onNewTodo={handleNewTodo}
+            />
 
-        </>
+            <h2>ToDos: {todosCount} / ToDos pendientes: {pendingTodosCount}</h2>
+
+            <TodoList
+                todos={todos}
+                onDeleteTodo={handleDeleteTodo}
+                onToggleTodo={handleToggleTodo}
+            />
+
+        </div>
     )
 };
 

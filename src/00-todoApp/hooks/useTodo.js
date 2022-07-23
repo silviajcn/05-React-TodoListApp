@@ -1,6 +1,6 @@
 import { useEffect, useReducer } from 'react';
 import { todoReducer } from '../todoReducer';
-
+    
 const init = () => {
     return JSON.parse(localStorage.getItem('todos')) || [];
 }
@@ -35,16 +35,6 @@ export const useTodo = () => {
             type: '[TODO] Toggle Todo',
             payload: id
         });
-    }
-
-    // const todosCount = () => {
-    //     const count = todos.length;
-
-    //     return count;
-    // }
-
-    const pendingTodosCount = () => {
-        
     }
 
     return {
