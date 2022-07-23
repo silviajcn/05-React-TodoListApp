@@ -29,6 +29,7 @@ export const TodoAdd = ({ onNewTodo }) => {
         <form onSubmit={onFormSubmit} className='todo-form'>
             <label htmlFor="add_todo" className='label-search' >Search GIFs</label>
             <input
+                autoComplete='off'
                 id='add_todo'
                 type='text'
                 placeholder="Add New ToDo"
