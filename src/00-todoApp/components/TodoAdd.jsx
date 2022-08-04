@@ -1,4 +1,5 @@
 import { useForm } from '../../hooks/useForm';
+import PropTypes from 'prop-types';
 
 const current = new Date();
 const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
@@ -27,7 +28,7 @@ export const TodoAdd = ({ onNewTodo }) => {
 
     return (
         <form onSubmit={onFormSubmit} className='todo-form'>
-            <label htmlFor="add_todo" className='label-search' >Search GIFs</label>
+            <label htmlFor="add_todo" className='label-search' >Add ToDo</label>
             <input
                 autoComplete='off'
                 id='add_todo'
@@ -48,3 +49,7 @@ export const TodoAdd = ({ onNewTodo }) => {
         </form>
     )
 };
+
+TodoAdd.propTypes = {
+    onNewTodo: PropTypes.func.isRequired
+}

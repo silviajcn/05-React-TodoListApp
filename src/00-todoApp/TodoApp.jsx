@@ -1,22 +1,13 @@
-import {TodoAdd, TodoList} from './components';
+import { TodoAdd, TodoList} from './components';
 import { useTodo } from './hooks/useTodo';
 import './todos.css';
 
 const TodoApp = () => {
 
-    const { todos, handleNewTodo, handleDeleteTodo, handleToggleTodo, todosCount, pendingTodosCount, isLoading} = useTodo();
+    const { todos, handleNewTodo, handleDeleteTodo, handleToggleTodo, todosCount, pendingTodosCount } = useTodo();
 
     return (
-        <div className='todo-app'>
-
-            {
-                isLoading && (<Loader />)
-            }
-
-            <header className=''>
-                <h1>My ToDo App</h1>
-            </header>
-            
+        <section className='todo-app'>
 
             <TodoAdd
                 onNewTodo={handleNewTodo}
@@ -30,7 +21,7 @@ const TodoApp = () => {
                 onToggleTodo={handleToggleTodo}
             />
 
-        </div>
+        </section>
     )
 };
 

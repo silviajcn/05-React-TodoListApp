@@ -20,7 +20,7 @@ body {
 }
 
 header {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .todo-app {
@@ -29,7 +29,7 @@ header {
   justify-content: start;
   align-items: center;
   width: 100%;
-  min-height: 600px;
+  min-height: auto;
   background: #161a2b;
   text-align: center;
   border-radius: 10px;
@@ -37,9 +37,11 @@ header {
 }
 
 h1 {
-  margin: 32px 0 10px 0;
+  margin: 10px 0 10px 0;
   color: #fff;
   font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
 }
 
 h2 {
@@ -55,6 +57,7 @@ h2 {
   align-items: center;
   flex-direction: row;
   width: 80%;
+  margin-top: 50px;
 }
 
 .label-search {
@@ -154,7 +157,11 @@ h2 {
 }
 
 .text-todo {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.date {
+  font-size: 0.8rem;
 }
 
 .complete {
@@ -262,6 +269,7 @@ footer a {
 
     .todo-form {
        width: 90%;
+       margin-top: 50px;
     }
 
     .todo-container {

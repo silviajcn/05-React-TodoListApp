@@ -7,12 +7,13 @@ import {
 const TodoItem = ({todo, onDeleteTodo, onToggleTodo}) => {
     return (
         <li className='todo-row'>
-            <span
+            <p
                 className={`text-todo ${(todo.done) ? 'complete' : ''}`}
                 onClick={() => onToggleTodo(todo.id)}
             >
-                {todo.description}
-            </span>
+                {todo.description} <br />
+                <span className='date'>{ todo.date }</span>
+            </p>
 
             <div className='containar-btns'>
                 {/* <button

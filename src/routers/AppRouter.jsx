@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { Footer } from '../00-todoApp/components/Footer';
+import { Header, Footer } from '../00-todoApp/components';
 import TodoApp from '../00-todoApp/TodoApp';
 import { Home } from '../pages';
 import { CounterApp, CounterWithCustomHook } from '../01-useState';
@@ -13,7 +13,7 @@ import { Padre } from '../07-tarea-memo/Padre';
 const AppRouter = () => {
     return (
         <>
-            {/* <Header /> */}
+            <Header />
 
             <Routes>
 
