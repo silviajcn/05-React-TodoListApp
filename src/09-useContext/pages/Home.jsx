@@ -9,7 +9,12 @@ export const Home = () => {
             <Link to="/" className='links'>
                 Go to ToDoApp
             </Link>
-            <br/>
+            <br />
+            
+            <Link to="/context" className='links'>
+                Go to MainApp
+            </Link>
+            <br />
 
             <Link to="/counter" className='links'>
                 Go to CounterApp
