@@ -28,6 +28,20 @@ Project (section 10 - ToDoApp):
 * TODOs app
 * CRUD local
 
+Project (section 11 - useContext):
+
+* Context
+* Provider
+* useContext
+* React Router
+* Links y NavLinks
+* CreateContext
+* SPA ( Single Page Application )
+
+Project (section 12 - Test):
+
+* Pruebas sobre Hooks y CustomHooks
+
 ## 📌 Dependencies
 
 * ```@babel/preset-env```

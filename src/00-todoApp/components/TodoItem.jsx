@@ -9,6 +9,7 @@ const TodoItem = ({todo, onDeleteTodo, onToggleTodo}) => {
         <li className='todo-row'>
             <p
                 className={`text-todo ${(todo.done) ? 'complete' : ''}`}
+                aria-label='p'
                 onClick={() => onToggleTodo(todo.id)}
             >
                 {todo.description} <br />
