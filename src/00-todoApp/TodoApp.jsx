@@ -1,6 +1,6 @@
 import { TodoAdd, TodoList} from './components';
 import { useTodo } from './hooks/useTodo';
-// import './todos.css';
+import './todos.css';
 
 const TodoApp = () => {
 
